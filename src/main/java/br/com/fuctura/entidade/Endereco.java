@@ -9,6 +9,7 @@ public class Endereco {
 	private String logradouro;
 	private String complemento;
 	private int numero;
+	private Loja loja;
 
 	public Endereco() {
 	}
@@ -19,6 +20,15 @@ public class Endereco {
 		this.logradouro = logradouro;
 		this.complemento = complemento;
 		this.numero = numero;
+	}
+
+	public Endereco(int codigo, String cep, String logradouro, String complemento, int numero, Loja loja) {
+		this.codigo = codigo;
+		this.cep = cep;
+		this.logradouro = logradouro;
+		this.complemento = complemento;
+		this.numero = numero;
+		this.loja = loja;
 	}
 
 	public int getCodigo() {
@@ -61,6 +71,14 @@ public class Endereco {
 		this.numero = numero;
 	}
 
+	public Loja getLoja() {
+		return loja;
+	}
+
+	public void setLoja(Loja loja) {
+		this.loja = loja;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo);
@@ -81,7 +99,7 @@ public class Endereco {
 	@Override
 	public String toString() {
 		return "Endereco [codigo=" + codigo + ", cep=" + cep + ", logradouro=" + logradouro + ", complemento="
-				+ complemento + ", numero=" + numero + "]";
+				+ complemento + ", numero=" + numero + ", loja=" + loja + "]";
 	}
 
 }

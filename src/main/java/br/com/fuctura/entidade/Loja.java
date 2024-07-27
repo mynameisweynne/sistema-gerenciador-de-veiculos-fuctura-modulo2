@@ -8,6 +8,7 @@ public class Loja {
 
 	private int codigo;
 	private String nome;
+	private Endereco endereco;
 	private List<Veiculo> veiculos = new ArrayList<>();
 
 	public Loja() {
@@ -16,6 +17,12 @@ public class Loja {
 	public Loja(int codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
+	}
+
+	public Loja(int codigo, String nome, Endereco endereco) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.endereco = endereco;
 	}
 
 	public int getCodigo() {
@@ -32,6 +39,14 @@ public class Loja {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	public List<Veiculo> getVeiculos() {
@@ -57,7 +72,7 @@ public class Loja {
 
 	@Override
 	public String toString() {
-		return "Loja [codigo=" + codigo + ", nome=" + nome + ", veiculos=" + veiculos + "]";
+		return "Loja [codigo=" + codigo + ", nome=" + nome + ", endereco=" + endereco + ", veiculos=" + veiculos + "]";
 	}
 
 }
