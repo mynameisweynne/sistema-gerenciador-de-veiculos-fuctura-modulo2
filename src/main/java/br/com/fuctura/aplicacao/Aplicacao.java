@@ -14,7 +14,7 @@ public class Aplicacao {
 
 		ClienteDAO clienteDAO = DAOFactory.criarClienteDAO();
 
-		System.out.println("========== TESTE 01: Inserção de Cliente ==========");
+		System.out.println("\n========== TESTE 01: Inserção de Cliente ==========");
 		System.out.print("Digite o nome do cliente: ");
 		String nome = sc.nextLine();
 		System.out.print("Digite o cpf do cliente: ");
@@ -25,6 +25,13 @@ public class Aplicacao {
 		clienteDAO.inserir(novoCliente);
 		System.out.println("Inserido! Novo id = " + novoCliente.getCodigo());
 
+		System.out.println("\n========== TESTE 02: Deleção de Cliente ==========");
+		System.out.print("Digite o código do cliente que será deletado: ");
+		int idDeletar = sc.nextInt();
+		sc.nextLine(); // Limpa o buffer do scanner
+		clienteDAO.deletar(idDeletar);
+		System.out.println("Deletado!");
+		
 		sc.close();
 	}
 

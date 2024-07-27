@@ -21,18 +21,15 @@ public class ClienteDAOJDBC implements ClienteDAO {
 	@Override
 	public void inserir(Cliente obj) {
 		try (PreparedStatement pstmt = conn.prepareStatement(
-				"INSERT INTO cliente" +
-				"(nome, cpf, celular)" +
-				"VALUES(?, ?, ?)",
-				Statement.RETURN_GENERATED_KEYS)) {
-			
+				"INSERT INTO cliente" + "(nome, cpf, celular)" + "VALUES(?, ?, ?)", Statement.RETURN_GENERATED_KEYS)) {
+
 			pstmt.setString(1, obj.getNome());
 			pstmt.setString(2, obj.getCpf());
 			pstmt.setString(3, obj.getCelular());
-			
+
 			int linhasAfetadas = pstmt.executeUpdate();
-				
-			try (ResultSet rs = pstmt.getGeneratedKeys()){
+
+			try (ResultSet rs = pstmt.getGeneratedKeys()) {
 				if (linhasAfetadas > 0) {
 					if (rs.next()) {
 						obj.setCodigo(rs.getInt(1));
@@ -41,16 +38,27 @@ public class ClienteDAOJDBC implements ClienteDAO {
 					throw new DBException("Inserção de cliente falhou!");
 				}
 			}
-			
+
 		} catch (SQLException e) {
 			throw new DBException(e.getMessage());
 		}
 	}
 
 	@Override
-	public void deletar(Cliente obj) {
-		// TODO Auto-generated method stub
+	public void deletar(int codigo) {
+		try (PreparedStatement pstmt = conn.prepareStatement("DELETE FROM cliente WHERE codigo = ?")) {
 
+			pstmt.setInt(1, codigo);
+
+			int rowsAffected = pstmt.executeUpdate();
+
+			if (rowsAffected == 0) {
+				throw new DBException("Nenhum usuário encontrado para exclusão. Verifique o CÓDIGO.");
+			}
+
+		} catch (SQLException e) {
+			throw new DBException(e.getMessage());
+		}
 	}
 
 }

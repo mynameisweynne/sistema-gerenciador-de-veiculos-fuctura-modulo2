@@ -5,5 +5,5 @@ import br.com.fuctura.entidade.Tipo;
 public interface TipoDAO {
 
 	void inserir (Tipo obj);
-	void deletar (Tipo obj);
+	void deletar (int id);
 }
