@@ -10,10 +10,11 @@ public class Veiculo {
 	private int ano;
 	private double valor;
 	private Tipo tipo;
+	private Loja loja;
 
 	public Veiculo() {
 	}
-	
+
 	public Veiculo(int codigo, String placa, String modelo, int ano, double valor) {
 		this.codigo = codigo;
 		this.placa = placa;
@@ -22,13 +23,14 @@ public class Veiculo {
 		this.valor = valor;
 	}
 
-	public Veiculo(int codigo, String placa, String modelo, int ano, double valor, Tipo tipo) {
+	public Veiculo(int codigo, String placa, String modelo, int ano, double valor, Tipo tipo, Loja loja) {
 		this.codigo = codigo;
 		this.placa = placa;
 		this.modelo = modelo;
 		this.ano = ano;
 		this.valor = valor;
 		this.tipo = tipo;
+		this.loja = loja;
 	}
 
 	public int getCodigo() {
@@ -69,14 +71,22 @@ public class Veiculo {
 
 	public void setValor(double valor) {
 		this.valor = valor;
-	}	
-	
+	}
+
 	public Tipo getTipo() {
 		return tipo;
 	}
 
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
+	}
+
+	public Loja getLoja() {
+		return loja;
+	}
+
+	public void setLoja(Loja loja) {
+		this.loja = loja;
 	}
 
 	@Override
@@ -99,7 +109,7 @@ public class Veiculo {
 	@Override
 	public String toString() {
 		return "Veiculo [codigo=" + codigo + ", placa=" + placa + ", modelo=" + modelo + ", ano=" + ano + ", valor="
-				+ valor + ", tipo=" + tipo + "]";
+				+ valor + ", tipo=" + tipo + ", loja=" + loja + "]";
 	}
 
 }

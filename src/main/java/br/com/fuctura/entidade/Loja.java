@@ -1,11 +1,14 @@
 package br.com.fuctura.entidade;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Loja {
 
 	private int codigo;
 	private String nome;
+	private List<Veiculo> veiculos = new ArrayList<>();
 
 	public Loja() {
 	}
@@ -31,6 +34,10 @@ public class Loja {
 		this.nome = nome;
 	}
 
+	public List<Veiculo> getVeiculos() {
+		return veiculos;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo);
@@ -50,7 +57,7 @@ public class Loja {
 
 	@Override
 	public String toString() {
-		return "Loja [codigo=" + codigo + ", nome=" + nome + "]";
+		return "Loja [codigo=" + codigo + ", nome=" + nome + ", veiculos=" + veiculos + "]";
 	}
 
 }
