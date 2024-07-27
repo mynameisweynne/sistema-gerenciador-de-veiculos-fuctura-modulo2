@@ -10,6 +10,7 @@ public class Loja {
 	private String nome;
 	private Endereco endereco;
 	private List<Veiculo> veiculos = new ArrayList<>();
+	private List<Venda> vendas = new ArrayList<>();
 
 	public Loja() {
 	}
@@ -51,6 +52,10 @@ public class Loja {
 
 	public List<Veiculo> getVeiculos() {
 		return veiculos;
+	}
+	
+	public List<Venda> getVendas() {
+		return vendas;
 	}
 
 	@Override

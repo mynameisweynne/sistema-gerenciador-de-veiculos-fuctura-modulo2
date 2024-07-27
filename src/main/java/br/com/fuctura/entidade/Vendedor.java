@@ -6,6 +6,7 @@ public class Vendedor {
 
 	private int codigo;
 	private String nome;
+	private Venda venda;
 
 	public Vendedor() {
 	}
@@ -13,6 +14,12 @@ public class Vendedor {
 	public Vendedor(int codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
+	}
+
+	public Vendedor(int codigo, String nome, Venda venda) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.venda = venda;
 	}
 
 	public int getCodigo() {
@@ -29,6 +36,14 @@ public class Vendedor {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVenda(Venda venda) {
+		this.venda = venda;
 	}
 
 	@Override

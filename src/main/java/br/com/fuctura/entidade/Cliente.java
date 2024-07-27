@@ -9,6 +9,7 @@ public class Cliente {
 	private String cpf;
 	private String celular;
 	private Endereco endereco;
+	private Venda venda;
 
 	public Cliente() {
 	}
@@ -21,12 +22,13 @@ public class Cliente {
 	}
 	
 	
-	public Cliente(int codigo, String nome, String cpf, String celular, Endereco endereco) {
+	public Cliente(int codigo, String nome, String cpf, String celular, Endereco endereco, Venda venda) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.celular = celular;
 		this.endereco = endereco;
+		this.venda = venda;
 	}
 
 	public int getCodigo() {
@@ -67,6 +69,14 @@ public class Cliente {
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+	
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVendas(Venda venda) {
+		this.venda = venda;
 	}
 
 	@Override
