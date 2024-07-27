@@ -9,17 +9,26 @@ public class Veiculo {
 	private String modelo;
 	private int ano;
 	private double valor;
+	private Tipo tipo;
 
 	public Veiculo() {
 	}
-
+	
 	public Veiculo(int codigo, String placa, String modelo, int ano, double valor) {
-		super();
 		this.codigo = codigo;
 		this.placa = placa;
 		this.modelo = modelo;
 		this.ano = ano;
 		this.valor = valor;
+	}
+
+	public Veiculo(int codigo, String placa, String modelo, int ano, double valor, Tipo tipo) {
+		this.codigo = codigo;
+		this.placa = placa;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.valor = valor;
+		this.tipo = tipo;
 	}
 
 	public int getCodigo() {
@@ -60,6 +69,14 @@ public class Veiculo {
 
 	public void setValor(double valor) {
 		this.valor = valor;
+	}	
+	
+	public Tipo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
 	}
 
 	@Override
@@ -82,7 +99,7 @@ public class Veiculo {
 	@Override
 	public String toString() {
 		return "Veiculo [codigo=" + codigo + ", placa=" + placa + ", modelo=" + modelo + ", ano=" + ano + ", valor="
-				+ valor + "]";
+				+ valor + ", tipo=" + tipo + "]";
 	}
 
 }

@@ -11,7 +11,6 @@ public class Loja {
 	}
 
 	public Loja(int codigo, String nome) {
-		super();
 		this.codigo = codigo;
 		this.nome = nome;
 	}

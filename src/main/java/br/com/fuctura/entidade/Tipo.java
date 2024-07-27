@@ -6,15 +6,21 @@ public class Tipo {
 
 	private int codigo;
 	private String descricao;
+	private Veiculo veiculo;
 
 	public Tipo() {
 
 	}
 
 	public Tipo(int codigo, String descricao) {
-		super();
 		this.codigo = codigo;
 		this.descricao = descricao;
+	}
+
+	public Tipo(int codigo, String descricao, Veiculo veiculo) {
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.veiculo = veiculo;
 	}
 
 	public int getCodigo() {
@@ -31,6 +37,14 @@ public class Tipo {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	public Veiculo getVeiculo() {
+		return veiculo;
+	}
+
+	public void setVeiculo(Veiculo veiculo) {
+		this.veiculo = veiculo;
 	}
 
 	@Override
@@ -52,7 +66,7 @@ public class Tipo {
 
 	@Override
 	public String toString() {
-		return "Tipo [codigo=" + codigo + ", descricao=" + descricao + "]";
+		return "Tipo [codigo=" + codigo + ", descricao=" + descricao + ", veiculo=" + veiculo + "]";
 	}
-	
+
 }

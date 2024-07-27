@@ -11,7 +11,6 @@ public class Vendedor {
 	}
 
 	public Vendedor(int codigo, String nome) {
-		super();
 		this.codigo = codigo;
 		this.nome = nome;
 	}

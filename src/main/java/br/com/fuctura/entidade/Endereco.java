@@ -14,7 +14,6 @@ public class Endereco {
 	}
 
 	public Endereco(int codigo, String cep, String logradouro, String complemento, int numero) {
-		super();
 		this.codigo = codigo;
 		this.cep = cep;
 		this.logradouro = logradouro;

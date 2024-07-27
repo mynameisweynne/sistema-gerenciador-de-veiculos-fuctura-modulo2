@@ -8,7 +8,6 @@ public class Vendas {
 	}
 
 	public Vendas(double valor) {
-		super();
 		this.valor = valor;
 	}
 

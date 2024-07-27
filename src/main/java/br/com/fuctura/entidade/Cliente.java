@@ -13,7 +13,6 @@ public class Cliente {
 	}
 
 	public Cliente(int codigo, String nome, String cpf, String celular) {
-		super();
 		this.codigo = codigo;
 		this.nome = nome;
 		this.cpf = cpf;
