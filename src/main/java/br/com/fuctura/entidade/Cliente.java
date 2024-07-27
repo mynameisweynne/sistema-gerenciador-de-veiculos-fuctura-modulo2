@@ -8,6 +8,7 @@ public class Cliente {
 	private String nome;
 	private String cpf;
 	private String celular;
+	private Endereco endereco;
 
 	public Cliente() {
 	}
@@ -17,6 +18,15 @@ public class Cliente {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.celular = celular;
+	}
+	
+	
+	public Cliente(int codigo, String nome, String cpf, String celular, Endereco endereco) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.celular = celular;
+		this.endereco = endereco;
 	}
 
 	public int getCodigo() {
@@ -50,6 +60,14 @@ public class Cliente {
 	public void setCelular(String celular) {
 		this.celular = celular;
 	}
+	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
 
 	@Override
 	public int hashCode() {
@@ -70,7 +88,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", cpf=" + cpf + ", celular=" + celular + "]";
+		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", cpf=" + cpf + ", celular=" + celular + ", endereco="
+				+ endereco + "]";
 	}
 
 }
