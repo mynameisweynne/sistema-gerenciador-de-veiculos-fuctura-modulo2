@@ -21,6 +21,11 @@ public class Cliente {
 		this.celular = celular;
 	}
 	
+	public Cliente(String nome, String cpf, String celular) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.celular = celular;
+	}
 	
 	public Cliente(int codigo, String nome, String cpf, String celular, Endereco endereco, Venda venda) {
 		this.codigo = codigo;
